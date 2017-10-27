@@ -1,7 +1,7 @@
 require "alimento/version"
 
 module Alimento
-	
+  class Alimento
 	attr_reader :nombre, :prt, :gluc, :lip
 
 	def initialize(nombre,prt,gluc,lip)
@@ -18,5 +18,5 @@ module Alimento
 	def kcal()
 		@prt*4+@gluc*4+@lip*9
 	end
-
+  end
 end

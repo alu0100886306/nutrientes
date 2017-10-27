@@ -1,13 +1,10 @@
 require "spec_helper"
+require "alimento"
 
 RSpec.describe Alimento do
-  it "has a version number" do
-    expect(Alimento::VERSION).not_to be nil
-  end
-  
   before :each do 
-		@a1=Alimento.new("Huevo frito", 14.1, 0.0, 19.5)
-		@a2=Alimento.new("Leche",       3.3,  4.8, 3.2)	
+		@a1=Alimento::Alimento.new("Huevo frito", 14.1, 0.0, 19.5)
+		@a2=Alimento::Alimento.new("Leche",       3.3,  4.8, 3.2)	
 	end
 
 	describe "# método mostrar nombre" do
