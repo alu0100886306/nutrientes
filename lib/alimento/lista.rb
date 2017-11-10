@@ -8,5 +8,13 @@ class Lista
 		@nombre=nombre
 		@head=@tail=nil
 	end
+	
+	def add_back(dato)
+		node=Nodo.new(dato,nil,nil)
 
+		@head=node if @head.nil?
+		node.prev_=@tail unless @tail.nil?
+		@tail.next_=node unless @tail.nil?
+		@tail=node
+	end
 end
