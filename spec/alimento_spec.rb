@@ -9,8 +9,13 @@ RSpec.describe Alimento do
 		@l1=Lista.new("Lacteos")	
 	end
 
-	it "método para insertar elemento en la lista" do
-		 @l1.add_back(@a2)
+	describe "metodos para insertar en la lista" do
+		it "1 elemento" do
+			@l1.add_back(@a2)
+		end
+		it "varios elementos" do
+			@l1.add_back([@a1,@a2])
+		end
 	end
 
 	describe "# método mostrar nombre" do
