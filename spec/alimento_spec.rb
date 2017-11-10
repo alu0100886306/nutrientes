@@ -9,6 +9,10 @@ RSpec.describe Alimento do
 		@l1=Lista.new("Lacteos")	
 	end
 
+	it "método para insertar elemento en la lista" do
+		 @l1.add_back(@a2)
+	end
+
 	describe "# método mostrar nombre" do
 		it "Se muestra correctamente" do
 			expect(@a1.nombre).to eq("Huevo frito")
