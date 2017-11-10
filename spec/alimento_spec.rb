@@ -6,6 +6,7 @@ RSpec.describe Alimento do
 		@a1=Alimento::Alimento.new("Huevo frito", 14.1, 0.0, 19.5)
 		@a2=Alimento::Alimento.new("Leche",       3.3,  4.8, 3.2)
 		@n1=Nodo.new(@a2,nil,nil)
+		@n2=Nodo.new(@a1,nil,nil)
 		@l1=Lista.new("Lacteos")	
 	end
 
@@ -17,7 +18,15 @@ RSpec.describe Alimento do
 			@l1.add_back([@a1,@a2])
 		end
 	end
-
+	
+	describe "métodos para extraer de la lista" do
+		it "extraer por head"do
+			expect(@l1.pop_front).to eq(@n1)
+		end
+		it "extraer por tail"do
+			expect(@l1.pop_front).to eq(@n1)
+		end
+	end
 	describe "# método mostrar nombre" do
 		it "Se muestra correctamente" do
 			expect(@a1.nombre).to eq("Huevo frito")
