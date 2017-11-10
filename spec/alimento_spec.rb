@@ -4,7 +4,8 @@ require "alimento"
 RSpec.describe Alimento do
   before :each do 
 		@a1=Alimento::Alimento.new("Huevo frito", 14.1, 0.0, 19.5)
-		@a2=Alimento::Alimento.new("Leche",       3.3,  4.8, 3.2)	
+		@a2=Alimento::Alimento.new("Leche",       3.3,  4.8, 3.2)
+		@n1=Nodo.new(@a1,nil,nil)	
 	end
 
 	describe "# método mostrar nombre" do
@@ -39,4 +40,5 @@ RSpec.describe Alimento do
 			expect(@a1.kcal).to eq(231.9)
 		end	
 	end
+	
 end
