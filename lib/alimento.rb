@@ -1,4 +1,5 @@
 require "alimento/version"
+require "alimento/lista"
 
 module Alimento
   class Alimento
