@@ -18,6 +18,10 @@ RSpec.describe Alimento do
 			@l1.add_back([@a1,@a2])
 		end
 	end
+
+	it "metodo para mostrar la lista formateada" do
+                expect(@l1.mostrar).to eq("algo")
+        end
 	
 	describe "# métodos para extraer de la lista" do
 		it "extraer por head"do
