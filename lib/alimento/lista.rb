@@ -63,4 +63,14 @@ class Lista
 			return aux
 		end
 	end
+	
+	def mostrar
+		str= "#{@nombre}\n"
+		aux=@head
+		while aux!=nil do
+			str+="\t"+aux.dato.to_s+"\n"
+			aux=aux.next_
+		end
+		str
+	end
 end
