@@ -32,6 +32,27 @@ class Lista
 		end
 	end
 	
+	def add_front(dato)
+		if dato.instance_of?Alimento 
+			node=Nodo.new(dato,nil,nil)
+		
+			@tail = node if @tail.nil?
+			node.next_ = @head unless @head.nil?
+			@head.prev_ = node unless @head.nil?		
+			@head = node
+		end
+		if dato.instance_of?Array
+			i=0
+			while i<dato.length do
+				@tail = node if @tail.nil?
+				node.next_ = @head unless @head.nil?
+				@head.prev_ = node unless @head.nil?		
+				@head = node
+				i+=1
+			end			
+		end
+	end
+	
 	def pop_back
 		if (@tail==@head)&&(@tail==nil)
 			return nil
