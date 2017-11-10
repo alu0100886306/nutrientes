@@ -20,7 +20,7 @@ class Lista
 		end
 		if dato.instance_of?Array
 			i=0
-			while 1<dato.length do
+			while i<dato.length do
 				node=Nodo.new(dato[i],nil,nil)
 
 				@head=node if @head.nil?
@@ -29,6 +29,38 @@ class Lista
 				@tail=node
 				i+=1
 			end
+		end
+	end
+	
+	def pop_back
+		if (@tail==@head)&&(@tail==nil)
+			return nil
+		elsif @tail==@head
+			aux=@tail.dup
+			@tail=@head=nil
+			return aux
+		else 
+			aux=@tail.dup
+			@tail=@tail.prev_
+			@tail.next_=nil
+			aux.prev_=nil
+			return aux
+		end
+	end
+
+	def pop_front
+		if (@tail==@head)&&(@tail==nil)
+			return nil
+		elsif @tail==@head
+			aux=@head.dup
+			@head=@tail=nil
+			return aux
+		else
+			aux=@head.dup
+			@head=@head.next_
+			@head.prev_=nil
+			aux.next_=nil
+			return aux
 		end
 	end
 end

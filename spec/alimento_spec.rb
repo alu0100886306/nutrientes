@@ -2,7 +2,7 @@ require "spec_helper"
 require "alimento"
 
 RSpec.describe Alimento do
-  before :each do 
+  before :all do 
 		@a1=Alimento::Alimento.new("Huevo frito", 14.1, 0.0, 19.5)
 		@a2=Alimento::Alimento.new("Leche",       3.3,  4.8, 3.2)
 		@n1=Nodo.new(@a2,nil,nil)
@@ -10,7 +10,7 @@ RSpec.describe Alimento do
 		@l1=Lista.new("Lacteos")	
 	end
 
-	describe "metodos para insertar en la lista" do
+	describe "# metodos para insertar en la lista" do
 		it "1 elemento" do
 			@l1.add_back(@a2)
 		end
@@ -19,12 +19,12 @@ RSpec.describe Alimento do
 		end
 	end
 	
-	describe "métodos para extraer de la lista" do
+	describe "# métodos para extraer de la lista" do
 		it "extraer por head"do
-			expect(@l1.pop_front).to eq(@n1)
+			expect(@l1.pop_front).to eq(@n2)
 		end
 		it "extraer por tail"do
-			expect(@l1.pop_front).to eq(@n1)
+			expect(@l1.pop_back).to eq(@n1)
 		end
 	end
 	describe "# método mostrar nombre" do
