@@ -10,11 +10,25 @@ class Lista
 	end
 	
 	def add_back(dato)
-		node=Nodo.new(dato,nil,nil)
+		if dato.instance_of?Alimento
+			node=Nodo.new(dato,nil,nil)
 
-		@head=node if @head.nil?
-		node.prev_=@tail unless @tail.nil?
-		@tail.next_=node unless @tail.nil?
-		@tail=node
+			@head=node if @head.nil?
+			node.prev_=@tail unless @tail.nil?
+			@tail.next_=node unless @tail.nil?
+			@tail=node
+		end
+		if dato.instance_of?Array
+			i=0
+			while 1<dato.length do
+				node=Nodo.new(dato[i],nil,nil)
+
+				@head=node if @head.nil?
+				node.prev_=@tail unless @tail.nil?
+				@tail.next_=node unless @tail.nil?
+				@tail=node
+				i+=1
+			end
+		end
 	end
 end
