@@ -5,7 +5,8 @@ RSpec.describe Alimento do
   before :each do 
 		@a1=Alimento::Alimento.new("Huevo frito", 14.1, 0.0, 19.5)
 		@a2=Alimento::Alimento.new("Leche",       3.3,  4.8, 3.2)
-		@n1=Nodo.new(@a1,nil,nil)	
+		@n1=Nodo.new(@a2,nil,nil)
+		@l1=Lista.new("Lacteos")	
 	end
 
 	describe "# método mostrar nombre" do
