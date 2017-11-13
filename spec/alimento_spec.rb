@@ -8,7 +8,15 @@ RSpec.describe Alimento do
 		@n2=Nodo.new(@a1,nil,nil)
 		@l1=Lista.new
 	end
-
+	
+	describe "# Alimentos comparables en base a su valor energético" do
+		it "huevofrito < Leche" do
+			expect(@a1<@a2).to eq(false)
+		end
+		it "huveofrito > Leche" do
+			expect(@a1>@a2).to eq(true)			
+		end
+	end
 	describe "# metodos para insertar en la lista" do
 		it "1 elemento" do
 			@l1.add_back(@a2)

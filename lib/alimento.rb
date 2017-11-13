@@ -4,6 +4,11 @@ require "alimento/lista"
 module Alimento
   class Alimento
 	attr_reader :nombre, :prt, :gluc, :lip
+	include Comparable
+	
+	def <=>(another)
+		kcal <=> another.kcal
+	end
 
 	def initialize(nombre,prt,gluc,lip)
 		@nombre=nombre
