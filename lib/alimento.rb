@@ -20,4 +20,15 @@ module Alimento
 		@prt*4+@gluc*4+@lip*9
 	end
   end
+	
+  class Grupo < Alimento
+	
+	def initialize(grupo,nombre,prt,gluc,lip)
+		super(nombre,prt,gluc,lip)
+		@grupo=grupo
+	end
+	def to_s
+		puts @grupo+"\n\t"+super.to_s
+	end
+  end
 end

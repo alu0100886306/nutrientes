@@ -2,10 +2,9 @@ Nodo = Struct.new(:dato,:next_,:prev_)
 
 class Lista
 
-	attr_reader :nombre, :head, :tail
+	attr_reader :head, :tail
 
-	def initialize(nombre)
-		@nombre=nombre
+	def initialize()
 		@head=@tail=nil
 	end
 	
@@ -86,7 +85,7 @@ class Lista
 	end
 	
 	def mostrar
-		str= "#{@nombre}\n"
+		str= ""
 		aux=@head
 		while aux!=nil do
 			str+="\t"+aux.dato.to_s+"\n"

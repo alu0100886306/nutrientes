@@ -1,13 +1,12 @@
 require "spec_helper"
-require "alimento"
-
+ 
 RSpec.describe Alimento do
   before :all do 
 		@a1=Alimento::Alimento.new("Huevo frito", 14.1, 0.0, 19.5)
 		@a2=Alimento::Alimento.new("Leche",       3.3,  4.8, 3.2)
 		@n1=Nodo.new(@a2,nil,nil)
 		@n2=Nodo.new(@a1,nil,nil)
-		@l1=Lista.new("Lacteos")	
+		@l1=Lista.new
 	end
 
 	describe "# metodos para insertar en la lista" do
@@ -18,6 +17,7 @@ RSpec.describe Alimento do
 			@l1.add_back([@a1,@a2])
 		end
 	end
+
 	describe "# mostrar lista" do	
 		it "metodo para mostrar la lista formateada" do
                 	expect(@l1.mostrar).to eq("algo")
