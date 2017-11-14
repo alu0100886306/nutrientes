@@ -26,6 +26,11 @@ RSpec.describe Alimento do
 		end
 	end
 
+	describe "# modulo enumerable" do
+		it "Seleccionar el segundo nodo de la lista" do
+			@l1[1]
+		end	
+	end
 	describe "# mostrar lista" do	
 		it "metodo para mostrar la lista formateada" do
                 	expect(@l1.mostrar).to eq("algo")
