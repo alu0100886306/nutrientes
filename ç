@@ -23,19 +23,14 @@ RSpec.describe Alimento do
 		end
 		it "varios elementos" do
 			@l1.add_back([@a1,@a2])
+			@l1.add_back(@a1)
 		end
 	end
 
 	describe "# modulo enumerable" do
 		it "Seleccionar el segundo nodo de la lista" do
-			expect(@l1[2]).to eq(nil)
+			expect(@l1[1]).to eq()
 		end	
-		it "Seleccionar valor fuera de la lista" do
-			expect(@l1[5]).to eq(nil)
-		end
-		it "método each" do
-			@l1.each {|nodo| puts nodo.mostrar}
-		end
 	end
 	describe "# mostrar lista" do	
 		it "metodo para mostrar la lista formateada" do

@@ -3,6 +3,7 @@ Nodo = Struct.new(:dato,:next_,:prev_)
 class Lista
 
 	attr_reader :head, :tail
+	include Enumerable
 
 	def initialize()
 		@head=@tail=nil
@@ -92,5 +93,15 @@ class Lista
 			aux=aux.next_
 		end
 		str
+	end
+	
+	def [] (index)
+		i=0
+		aux=@head
+		while i<index&&aux!=nil do
+			i+=1
+			aux=aux.next_
+		end
+		aux			
 	end
 end
