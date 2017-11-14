@@ -104,4 +104,12 @@ class Lista
 		end
 		aux			
 	end
+	
+	def each
+		aux=@head
+		while aux!=nil do
+			yield aux
+			aux=aux.next_
+		end
+	end
 end

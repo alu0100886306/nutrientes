@@ -34,7 +34,7 @@ RSpec.describe Alimento do
 			expect(@l1[5]).to eq(nil)
 		end
 		it "método each" do
-			@l1.each {|nodo| puts nodo.mostrar}
+			@l1.each {|nodo| puts nodo.dato.to_s}
 		end
 	end
 	describe "# mostrar lista" do	
