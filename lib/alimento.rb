@@ -36,4 +36,9 @@ module Alimento
 		puts @grupo+"\n\t"+super.to_s
 	end
   end
+	
+    # aibc=0 
+    # ig=0
+    # 100*(vvpruebas.map{|vprueba| aibc=0 (1..vprueba.length).each{|i| aibc+=((vprueba[i]-vprueba[0])+(vprueba[i-1]-vprueba[0]))*5/2 } } )/(vvglucosas.map{|vglucosa| aibc=0 (1..vglucosa.length).each{|i| aibc+=((vglucosa[i]-vglucosa[0])+(vglucosa[i-1]-vglucosa[0]))*5/2 } } )/vvpruebas.length+1
+
 end

@@ -28,7 +28,7 @@ RSpec.describe Alimento do
 
 	describe "# modulo enumerable" do
 		it "Seleccionar el segundo nodo de la lista" do
-			expect(@l1[2]).to eq(nil)
+			expect(@l1[1]).to eq(nil)
 		end	
 		it "Seleccionar valor fuera de la lista" do
 			expect(@l1[5]).to eq(nil)
