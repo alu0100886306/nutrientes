@@ -15,7 +15,7 @@ RSpec.describe Alimento do
 	
 	describe "# Ig con programacion funcional" do
 		it "IG comp_manzana" do
-			expect(ig_func([comp_manz1,comp_manz2],[glucosa1,glucosa2])).to eq(54)
+			expect(ig_func([@comp_manz1,@comp_manz2],[@glucosa1,@glucosa2])).to eq(54)
 		end
 	end	
 	describe "# Alimentos comparables en base a su valor energético" do
