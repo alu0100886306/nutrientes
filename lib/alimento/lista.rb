@@ -108,7 +108,7 @@ class Lista
 	def each
 		aux=@head
 		while aux!=nil do
-			yield aux
+			yield aux.dato
 			aux=aux.next_
 		end
 	end

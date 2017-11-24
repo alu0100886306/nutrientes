@@ -26,7 +26,7 @@ module Alimento
 	end
   end
 	
-  class Grupo < Alimento
+  class Grupoal < Alimento
 	
 	def initialize(grupo,nombre,prt,gluc,lip)
 		super(nombre,prt,gluc,lip)
