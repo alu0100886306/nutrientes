@@ -1,7 +1,8 @@
 require "alimento/version"
 require "alimento/lista"
 require "alimento/IG_fun"
-
+require "alimento/ordenar"
+require "benchmark"
 module Alimento
   class Alimento
 	attr_reader :nombre, :prt, :gluc, :lip

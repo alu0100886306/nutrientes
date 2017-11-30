@@ -99,13 +99,23 @@ RSpec.describe Alimento do
 
 	describe "# Ordenación en base al valor energético" do
 		it "Con for" do
-			expect(ord_for(@a1,@a2,@a3)).to eq([@a1,@a2,@a3])
+			expect(ord_for([@a1,@a2,@a3])).to eq([@a3,@a1,@a2])
 		end
 		it "Con each" do
-			expect(ord_each(@a1,@a2,@a3)).to eq([@a1,@a2,@a3])
+			expect(ord_each([@a1,@a2,@a3])).to eq([@a3,@a1,@a2])
 		end
 		it "Con sort" do
-			expect(ord_sort(@a1,@a2,@a3)).to eq([@a1,@a2,@a3])
+			expect(ord_sort([@a1,@a2,@a3])).to eq([@a3,@a1,@a2])
+		end
+	end
+
+	describe "# Benchmark de ordenación" do
+                it "pruebas" do
+			Benchmark.bm do |x|
+  				x.report("for:")   { ord_for ([@a1,@a2,@a3]) }
+  				x.report("each:") { ord_each ([@a1,@a2,@a3]) }
+  				x.report("sort:")  { ord_sort ([@a1,@a2,@a3]) }
+			end
 		end
 	end
 	
