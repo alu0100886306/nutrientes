@@ -16,7 +16,7 @@ RSpec.describe Alimento do
 	
 	describe "# Ig con programacion funcional" do
 		it "IG comp_manzana" do
-			expect(ig_func([@comp_manz1,@comp_manz2],[@glucosa1,@glucosa2])).to eq(54)
+			expect(ig_func([@comp_manz1,@comp_manz2],[@glucosa1,@glucosa2])).to eq(54.499780077077766)
 		end
 	end	
 	describe "# Alimentos comparables en base a su valor energético" do
@@ -41,18 +41,18 @@ RSpec.describe Alimento do
 
 	describe "# modulo enumerable" do
 		it "Seleccionar el segundo nodo de la lista" do
-			expect(@l1[1]).to eq(nil)
+			expect(@l1[1]).not_to eq(nil)
 		end	
 		it "Seleccionar valor fuera de la lista" do
 			expect(@l1[5]).to eq(nil)
 		end
 		it "método each" do
-			@l1.each {|nodo| puts nodo.dato.to_s}
+			@l1.each {|nodo| puts nodo.to_s}
 		end
 	end
 	describe "# mostrar lista" do	
 		it "metodo para mostrar la lista formateada" do
-                	expect(@l1.mostrar).to eq("algo")
+                	@l1.mostrar
         	end
 	end
 	
