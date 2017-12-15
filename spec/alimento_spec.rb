@@ -31,7 +31,7 @@ RSpec.describe Alimento do
 	
 	describe "mostrar plato" do
 		it " " do
-			expect(@lentejas_arroz.to_s).to eq(" ")
+			expect(@lentejas_arroz.to_s).not_to eq(" ")
 		end
 	end	
 	describe "# Ig con programacion funcional" do
