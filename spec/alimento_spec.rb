@@ -12,8 +12,28 @@ RSpec.describe Alimento do
 		@comp_manz2= [4.6,4.8,5.3,5.6,6.1,6.5,6.6,7.0,7.0,6.8,6.4,6.3,6.1,6.1,6.2,6.0,6.1,6.1 ,6.2 ,6.3,6.4,6.1,6.1,5.7,5.9]
 		@glucosa1  = [4.9,5.3,5.9,6.7,7.2,7.6,8.0,8.2,8.2,8.4,8.3,8.3,8.0,7.5,7.1,6.8,6.8,6.9 ,6.8 ,6.3,6.2,6.3,6.2,6.3,6.1]
 		@glucosa2  = [6.3,5.4,5.6,5.7,6.5,7.4,7.9,7.4,7.7,7.9,7.9,7.8,7.8,7.8,8.0,8.5,9.4,10.8,10.5,9.1,8.9,8.3,7.7,7.6,7.5]
+		@lentejas_arroz = Alimento::Plato.new("Lentejas con arroz, salsa de tomate, huevo y platano a la plancha") do
+        		vegetal     "Tomate",
+        		        :porcion => "2 piezas"
+			vegetal       "Platano",
+				:gramos => 20
+			vegetal      "Arroz",
+				:porcion => "1 taza"
+			vegetal    "Lentejas",
+				:porcion => "1/2 cuchar ́on"
+			vegetal    "Huevo",
+				:porcion => "1 pieza"
+			vegetal      "Aceite de oliva",
+				:porcion => "1/2 cucharada"
+		end
+
 	end
 	
+	describe "mostrar plato" do
+		it " " do
+			expect(@lentejas_arroz.to_s).to eq(" ")
+		end
+	end	
 	describe "# Ig con programacion funcional" do
 		it "IG comp_manzana" do
 			expect(ig_func([@comp_manz1,@comp_manz2],[@glucosa1,@glucosa2])).to eq(54.499780077077766)
